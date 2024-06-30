@@ -4,9 +4,13 @@ function countKeysInRange($start, $end) {
     return gmp_strval(gmp_add(gmp_sub(gmp_init($end, 16), gmp_init($start, 16)), 1));
 }
 
-// Carregar dados do arquivo JSON
-$dataFile = 'ranges.json';
-$ranges = json_decode(file_get_contents($dataFile), true);
+// URL do repositório e caminho para o arquivo JSON
+$repoUrl = 'https://raw.githubusercontent.com/sophosgh1/Bitcoin-Puzzle-Tracker/main/';
+$dataFile = $repoUrl . 'ranges.json';
+
+// Carregar dados do arquivo JSON via API do GitHub
+$json = file_get_contents($dataFile);
+$ranges = json_decode($json, true);
 
 // Ordenar os ranges por data de inclusão (mais recente primeiro)
 usort($ranges, function($a, $b) {
