@@ -1,0 +1,75 @@
+/* Estilo Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #1e90ff;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    margin-top: 10px;
+}
+
+.range-list .list-group-item {
+    background: #2f3640;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: transform 0.3s, background 0.3s;
+    color: #d2dae2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.range-list .list-group-item:hover {
+    transform: scale(1.02);
+    background: #353b48;
+}
+
+.range-item span {
+    font-size: 1rem;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination .page-item .page-link {
+    color: #1e90ff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+}
+
+.statistics {
+    margin-top: 40px;
+}
